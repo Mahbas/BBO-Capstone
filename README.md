@@ -1,11 +1,19 @@
 # AI_Course_Capstone
 
-This repository includes formal documentation to support transparency, reproducibility and responsible research practice:
+This repository contains my Black-Box Optimisation (BBO) capstone project, completed as part of a multi-stage machine learning programme. The project simulates a real-world optimisation challenge in which the goal is to maximise eight unknown (black-box) functions under strict evaluation constraints.
 
-- 📄 **Datasheet**:  
-  Describes the BBO capstone data set (query history and function evaluations), including motivation, composition, collection process and limitations.  
-  ➜ [View Datasheet](main/ModelCard_BBO_Optimisation)
+Each black-box function represents a realistic optimisation scenario where evaluations are expensive and the underlying function is unknown, such as problems encountered in robotics, scientific discovery or system tuning. The functions vary in dimensionality from 2D to 8D, increasing in complexity over the course of the project.
 
-- 📘 **Model Card**:  
-  Documents the Bayesian optimisation approach used in this project, including intended use, strategy evolution, performance and ethical considerations.  
-  ➜ [View Model Card](main/model_card.md)
+At the start of the capstone, each function is provided with ten initial observations. Across ten sequential rounds, only one new query per function per round is permitted. After each submission, the newly observed outputs are added to the dataset, and the optimisation strategy is revised accordingly. This iterative process mirrors how optimisation is approached in real research and industrial settings, where decisions must be made with limited and gradually expanding information.
+
+Rather than aiming for perfect global optima, the focus of this project is on principled decision-making, exploration–exploitation trade-offs and transparent reasoning. A range of strategies were explored, including exploratory sampling, local exploitation of promising regions and data-driven adaptation as patterns emerged across rounds. Weekly reflections document how insights from previous evaluations informed subsequent decisions.
+
+To support reproducibility and responsible ML practice, this repository includes:
+
+  - A datasheet documenting the query history and function evaluations generated during the project
+
+  - A model card describing the optimisation strategy, assumptions, performance and limitations
+
+  - Supporting notebooks and analysis used to guide decision-making across rounds
+
+The project emphasises that in black-box optimisation, success is defined not only by the final numerical outcome, but by the clarity, rigour and adaptability of the optimisation process itself.
